@@ -1,0 +1,69 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org" ng-app="Parakeet">
+	<head>
+		<meta http-equiv="x-ua-compatible" content="IE=Edge">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+		<link rel="apple-touch-icon" href="./images/parakeet_logo_small.png"/>  
+		<title>Parakeet Shopping List 0.1.1 (Beta)</title>
+
+		<!-- Styles -->
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link href="./css/parakeet.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="wrapper" ng-controller="paraMainCtrl">
+			<header id="header">
+				<div id="logo">
+					<a href="#/"><span>Parakeet 0.1.1</span></a>
+				</div>
+				<div id="form-wrap">
+					<form name="ItemForm" ng-submit="addItem()">
+						<div>
+							<input type="text" id="item-text" name="item-text" class="inline" placeholder="add item..." ng-model="item.label" required />
+							<button type="submit" id="add-button" class="btn btn-primary inline" ng-disabled="ItemForm.$invalid"><i class="icon-plus icon-white"></i>Add</button>
+						</div>
+
+					</form>
+				</div>
+			</header>
+			<div id="list-wrap">
+				<div class="list-info">
+					<h4 class="remaining">{{remaining()}} of {{items.length}} items</h4>
+					<button class="btn btn-small" ng-click="cartItems()">Clear Carted</button>
+				</div>
+				<div class="" ng-show="status">
+					<p>Error: {{status}}</p>
+				</div>
+				<ul id="list" class="unstyled">
+					<li ng-repeat="item in items | orderBy:'label' " class="item">
+						<input type="checkbox" id="item-box-{{$index + 1}}" name="item-box-{{$index + 1}}" ng-model="item.carted">
+						<label for="item-box-{{$index + 1}}" class="done-{{item.carted}} checkbox" >{{item.label}}</span>
+					</li>
+				</ul>
+			</div>
+			<div ng-modal ng-transclude>Here</div>
+<!-- 
+			<div id="main-view" ng-view></div>
+end #main-view -->
+			<footer id="footer">
+				<a href="http://www.thesmalltime.com" title="theSmallTime" target="_blank">&copy; 2013 theSmallTime</a>
+			</footer>
+		</div>
+	</body>
+	<!-- Scripts -->
+	<!-- jQuery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<!-- AngularJS -->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-resource.min.js"></script>
+	<!-- Twitter Bootstrap -->
+	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+	<!-- Firebase -->
+	<script src="//cdn.firebase.com/v0/firebase.js"></script>
+	<script src="http://firebase.github.io/angularFire/angularFire.js"></script>
+	<!-- Parakeet Controllers -->
+	<script type="text/javascript" src="./scripts/app.js"></script>
+	<script type="text/javascript" src="./scripts/controllers.js"></script>
+	<script type="text/javascript" src="./scripts/directives.js"></script>
+</html>

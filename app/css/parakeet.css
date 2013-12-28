@@ -1,0 +1,25 @@
+/* Parakeet Styles */
+
+header{padding: 7px 0px 0px 5px; background: #efefef; position: fixed; width: 100%; top: 0;box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.5)}
+header #logo{background: url(../images/parakeet_logo_small.png) no-repeat center center; width: 32px; height: 29px; float: left; margin:0px 9px 0px 0px;}
+header #logo a{display: block; text-indent: -1000px;}
+
+#list-wrap{margin-top: 60px; padding: 0 7px;}
+#form-wrap{float: left; width: 94%; text-align: center;}
+#form-wrap form{margin:0;}
+#form-wrap .input-append{width:95%; margin:0;}
+#form-wrap #item-text{width:89%;}
+#form-wrap button{float:right;}
+.done-true{color:#ccc; text-decoration: line-through;font-weight: normal; background:#666}
+.item{border:1px solid #ccc; margin:2px 0;}
+.item label.checkbox{padding: 10px; margin:0;}
+.item i{}
+.item [type="checkbox"]{display: none;}
+
+@media (max-width: 979px){
+	body{padding:0;}
+
+	#form-wrap{float: left; width: 86%; text-align: center;}
+	#form-wrap #item-text{width: 67%; float: left; margin-right: 10px;}
+	#form-wrap button{float:left;}
+}
