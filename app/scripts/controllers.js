@@ -1,7 +1,8 @@
-var paraMainCtrl = function($scope, Items){
+var Parakeet = angular.module('Parakeet');
 
+Parakeet.controller('ListCtrl', ['$scope', 'Items', function($scope, Items){
 	$scope.items = Items;
-	
+
 	$scope.addItem = function(){
 		
 		// Use Firebase object, with add method to append new Item
@@ -31,5 +32,5 @@ var paraMainCtrl = function($scope, Items){
 	    });
 	    return count;
 	}
-}
-paraMainCtrl.$inject = ['$scope', 'Items'];
+
+}]);

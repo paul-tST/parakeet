@@ -12,7 +12,7 @@
 		<link href="./css/parakeet.css" rel="stylesheet">
 	</head>
 	<body>
-		<div class="wrapper" ng-controller="paraMainCtrl">
+		<div class="wrapper" ng-controller="ListCtrl">
 			<header id="header">
 				<div id="logo">
 					<a href="#/"><span>Parakeet 0.1.1</span></a>
@@ -27,7 +27,7 @@
 					</form>
 				</div>
 			</header>
-			<div id="list-wrap">
+			<div id="list-wrap" ng-cloak>
 				<div class="list-info">
 					<h4 class="remaining">{{remaining()}} of {{items.length}} items</h4>
 					<button class="btn btn-small" ng-click="cartItems()">Clear Carted</button>
@@ -42,7 +42,6 @@
 					</li>
 				</ul>
 			</div>
-			<div ng-modal ng-transclude>Here</div>
 <!-- 
 			<div id="main-view" ng-view></div>
 end #main-view -->
