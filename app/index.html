@@ -17,7 +17,7 @@
 				<div id="logo">
 					<a href="#/"><span>Parakeet 0.1.1</span></a>
 				</div>
-				<div id="form-wrap">
+				<div id="form-wrap" ng-controller="ListCtrl">
 					<form name="ItemForm" ng-submit="addItem()">
 						<div>
 							<input type="text" id="item-text" name="item-text" class="inline" placeholder="add item..." ng-model="item.label" required />
@@ -37,7 +37,7 @@
 	<!-- bower:js -->
 	<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="../bower_components/angular-route/angular-route.min.js"></script>
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-resource.min.js"></script>
+	<script type="text/javascript" src="../bower_components/angular-resource/angular-resource.min.js"></script>
 	<script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script src="../bower_components/firebase/firebase.js"></script>
 	<script src="../bower_components/firebase-simple-login/firebase-simple-login.js"></script>
@@ -48,4 +48,5 @@
 	<script type="text/javascript" src="./scripts/app.js"></script>
 	<script type="text/javascript" src="./scripts/controllers.js"></script>
 	<script type="text/javascript" src="./scripts/directives.js"></script>
+	<script type="text/javascript" src="./scripts/resources.js"></script>
 </html>
