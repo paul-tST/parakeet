@@ -8,11 +8,11 @@
 		<title>Parakeet Shopping List 0.1.1 (Beta)</title>
 
 		<!-- Styles -->
-		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link href="../bower_components/bootstrap-css-only/css/bootstrap.min.css" rel="stylesheet">
 		<link href="./css/parakeet.css" rel="stylesheet">
 	</head>
 	<body>
-		<div class="wrapper" ng-controller="ListCtrl">
+		<div class="wrapper">
 			<header id="header">
 				<div id="logo">
 					<a href="#/"><span>Parakeet 0.1.1</span></a>
@@ -27,40 +27,23 @@
 					</form>
 				</div>
 			</header>
-			<div id="list-wrap" ng-cloak>
-				<div class="list-info">
-					<h4 class="remaining">{{remaining()}} of {{items.length}} items</h4>
-					<button class="btn btn-small" ng-click="cartItems()">Clear Carted</button>
-				</div>
-				<div class="" ng-show="status">
-					<p>Error: {{status}}</p>
-				</div>
-				<ul id="list" class="unstyled">
-					<li ng-repeat="item in items | orderBy:'label' " class="item">
-						<input type="checkbox" id="item-box-{{$index + 1}}" name="item-box-{{$index + 1}}" ng-model="item.carted">
-						<label for="item-box-{{$index + 1}}" class="done-{{item.carted}} checkbox" >{{item.label}}</span>
-					</li>
-				</ul>
-			</div>
-<!-- 
 			<div id="main-view" ng-view></div>
-end #main-view -->
-			<footer id="footer">
-				<a href="http://www.thesmalltime.com" title="theSmallTime" target="_blank">&copy; 2013 theSmallTime</a>
+			<footer id="footer" ng-controller="FooterCtrl">
+				<a href="http://www.thesmalltime.com" title="theSmallTime" target="_blank">&copy; {{currentYear}} theSmallTime</a>
 			</footer>
 		</div>
 	</body>
 	<!-- Scripts -->
-	<!-- jQuery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<!-- AngularJS -->
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+	<!-- bower:js -->
+	<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="../bower_components/angular-route/angular-route.min.js"></script>
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-resource.min.js"></script>
-	<!-- Twitter Bootstrap -->
-	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-	<!-- Firebase -->
-	<script src="//cdn.firebase.com/v0/firebase.js"></script>
-	<script src="http://firebase.github.io/angularFire/angularFire.js"></script>
+	<script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="../bower_components/firebase/firebase.js"></script>
+	<script src="../bower_components/firebase-simple-login/firebase-simple-login.js"></script>
+	<script src="../bower_components/angularFire/angularFire.js"></script>
+	<!-- endbower -->
+
 	<!-- Parakeet Controllers -->
 	<script type="text/javascript" src="./scripts/app.js"></script>
 	<script type="text/javascript" src="./scripts/controllers.js"></script>

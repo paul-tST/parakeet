@@ -1,8 +1,12 @@
 /* Parakeet Styles */
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {display: none !important;}
+
 header{padding: 7px 0px 0px 5px; background: #efefef; position: fixed; width: 100%; top: 0;box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.5)}
 header #logo{background: url(../images/parakeet_logo_small.png) no-repeat center center; width: 32px; height: 29px; float: left; margin:0px 9px 0px 0px;}
 header #logo a{display: block; text-indent: -1000px;}
+
+#main-view{margin-top: 60px;}
 
 #list-wrap{margin-top: 60px; padding: 0 7px;}
 #form-wrap{float: left; width: 94%; text-align: center;}

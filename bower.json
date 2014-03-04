@@ -1,0 +1,32 @@
+{
+  "name": "parakeet",
+  "version": "0.1.1",
+  "homepage": "http://parakeet.thesmalltime.com",
+  "authors": [
+    "Barry",
+    "Paul <paul@thesmalltime.com>"
+  ],
+  "description": "A simple real-time shopping list app.",
+  "main": "/app/index.html",
+  "keywords": [
+    "AngularJS",
+    "FireBase",
+    "AngularFire"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-bootstrap": "~0.10.0",
+    "angularfire": "~0.7.0",
+    "angular-route": "~1.2.14",
+    "angular-resource": "~1.2.14",
+    "angular-cookie": "*",
+    "bootstrap-css-only": "~3.1.0"
+  }
+}

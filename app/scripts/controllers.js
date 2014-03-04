@@ -34,3 +34,13 @@ Parakeet.controller('ListCtrl', ['$scope', 'Items', function($scope, Items){
 	}
 
 }]);
+
+Parakeet.controller('MainCtrl', ['$scope', function($scope){
+	// check for cookie, if none, display login
+	// if cookie exists, redirect to /:userID/list
+}]);
+
+Parakeet.controller('FooterCtrl', ['$scope', function($scope){
+	$scope.currentYear = new Date().getFullYear();
+	
+}])
