@@ -1,0 +1,16 @@
+<div class="alert alert-info">Loading list items...</div>
+<div id="list-wrap">
+	<div class="list-info">
+		<h4 class="remaining">{{items.length}} items</h4>
+		<button class="btn btn-small" ng-click="cartItems()">Clear Carted</button>
+	</div>
+	<div class="" ng-show="status">
+		<p>Error: {{status}}</p>
+	</div>
+	<ul id="list" class="unstyled">
+		<li ng-repeat="item in items | orderBy:'label'  " class="item">
+			<input type="checkbox" id="item-box-{{$index + 1}}" name="item-box-{{$index + 1}}" ng-model="item.carted">
+			<label for="item-box-{{$index + 1}}" class="done-{{item.carted}} checkbox" >{{item.label}}</span>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,17 @@
+<form id="userLoginForm" class="form-inline" role="form" ng-submit="loginUser()">
+	<div class="form-group">
+		<label for="para-useremail" class="sr-only">Email</label>
+		<input type="email" id="para-useremail" name="para-useremail" class="form-control" placeholder="Email" ng-model="userInfo.email" />
+		<span class="form-error" ng-show="">Please enter a valid email</span>
+	</div>
+	<div class="form-group">
+		<label for="para-userpass" class="sr-only">Password</label>
+		<input type="password" name="para-userpass" placeholder="Password" ng-model="userInfo.password">
+	</div>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox"> Remember me
+		</label>
+	</div>
+	<button type="submit" class="btn btn-primary">Login</button>
+</form>

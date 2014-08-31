@@ -1,0 +1,12 @@
+<div id="logo">
+	<a href="#/"><span>Parakeet 0.1.1</span></a>
+</div>
+<div id="form-wrap" ng-controller="ListCtrl">
+	<form name="ItemForm" class="form-inline" ng-submit="addItem()">
+		<div class="form-group">
+			<label for="item-text" class="sr-only">Item: </label>
+			<input type="text" name="item-text" class="form-control" placeholder="add..." ng-model="item.label" required>
+		</div>
+		<button type="submit" id="add-button" class="btn btn-primary" ng-disabled="ItemForm.$invalid"><i class="icon-plus icon-white"></i>Add</button>
+	</form>
+</div>
