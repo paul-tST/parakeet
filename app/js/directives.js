@@ -1,8 +1,8 @@
-'use strict'
+'use strict';
 
-Parakeet.directives = angular.module('Parakeet.directives', []);
+var Directives = angular.module('Parakeet.directives', []);
 
-Parakeet.directives.directive('modal', function(){
+Directives.directive('modal', function(){
 	return {
 
 		restrict: 'A',
@@ -14,5 +14,5 @@ Parakeet.directives.directive('modal', function(){
 
 		}
 
-	}
+	};
 });

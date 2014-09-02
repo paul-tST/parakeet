@@ -21,12 +21,14 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
+  "dependencies": {
     "angular-bootstrap": "~0.10.0",
     "angularfire": "~0.7.0",
     "angular-route": "~1.2.14",
     "angular-resource": "~1.2.14",
     "angular-cookie": "*",
-    "bootstrap-css-only": "~3.1.0"
-  }
+    "bootstrap-css-only": "~3.1.0",
+    "angularfire": "~0.8.2"
+  },
+  "devDependencies": {}
 }

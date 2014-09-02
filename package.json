@@ -1,0 +1,21 @@
+{
+  "name": "parakeet",
+  "version": "0.1.0",
+  "description": "A real-time shopping list.",
+  "main": "app/index.html",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github_pb:paul-tST/parakeet.git"
+  },
+  "author": "Paul Barry <devlab2425@gmail.com> (https://github.com/DevLab2425/angular-simple-slideshow)",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-wiredep": "^1.8.0",
+    "grunt-script-inject": "0.0.3"
+  }
+}

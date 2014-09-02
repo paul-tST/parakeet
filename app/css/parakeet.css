@@ -6,6 +6,8 @@ header{padding: 7px 0px 0px 5px; background: #efefef; position: fixed; width: 10
 header #logo{background: url(../images/parakeet_logo_small.png) no-repeat center center; width: 32px; height: 29px; float: left; margin:0px 9px 0px 0px;}
 header #logo a{display: block; text-indent: -1000px;}
 
+.wrapper{padding-bottom: 65px;}
+
 #main-view{margin-top: 60px;}
 
 #list-wrap{margin-top: 60px; padding: 0 7px;}
@@ -19,6 +21,17 @@ header #logo a{display: block; text-indent: -1000px;}
 .item label.checkbox{padding: 10px; margin:0;}
 .item i{}
 .item [type="checkbox"]{display: none;}
+
+.list-info {
+	position: fixed;
+	z-index: 10;
+	bottom: 0;
+	background: #fff;
+	width: 100%;
+	border-top: 1px solid #000;
+	margin: 0 -7px;
+	padding: 5px 10px;
+}
 
 @media (max-width: 979px){
 	body{padding:0;}

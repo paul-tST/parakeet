@@ -8,8 +8,10 @@
 		<title>Parakeet Shopping List 0.1.1 (Beta)</title>
 
 		<!-- Styles -->
-		<link href="../bower_components/bootstrap-css-only/css/bootstrap.min.css" rel="stylesheet">
-		<link href="./css/parakeet.css" rel="stylesheet">
+		<!-- bower:css -->
+		<link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css" />
+		<!-- endbower -->
+		<link href="css/parakeet.css" rel="stylesheet">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -20,7 +22,7 @@
 				<div id="form-wrap" ng-controller="ListCtrl">
 					<form name="ItemForm" ng-submit="addItem()">
 						<div>
-							<input type="text" id="item-text" name="item-text" class="inline" placeholder="add item..." ng-model="item.label" required />
+							<input type="text" id="item-text" name="item-text" class="inline" placeholder="add item&hellip;" ng-model="item.label" required />
 							<button type="submit" id="add-button" class="btn btn-primary inline" ng-disabled="ItemForm.$invalid"><i class="icon-plus icon-white"></i>Add</button>
 						</div>
 
@@ -35,18 +37,22 @@
 	</body>
 	<!-- Scripts -->
 	<!-- bower:js -->
-	<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
-	<script type="text/javascript" src="../bower_components/angular-route/angular-route.min.js"></script>
-	<script type="text/javascript" src="../bower_components/angular-resource/angular-resource.min.js"></script>
-	<script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-	<script src="../bower_components/firebase/firebase.js"></script>
-	<script src="../bower_components/firebase-simple-login/firebase-simple-login.js"></script>
-	<script src="../bower_components/angularFire/angularFire.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="bower_components/firebase/firebase.js"></script>
+	<script src="bower_components/firebase-simple-login/firebase-simple-login.js"></script>
+	<script src="bower_components/mockfirebase/dist/mockfirebase.js"></script>
+	<script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="bower_components/angular-cookie/angular-cookie.js"></script>
 	<!-- endbower -->
 
 	<!-- Parakeet Controllers -->
-	<script type="text/javascript" src="./scripts/app.js"></script>
-	<script type="text/javascript" src="./scripts/controllers.js"></script>
-	<script type="text/javascript" src="./scripts/directives.js"></script>
-	<script type="text/javascript" src="./scripts/resources.js"></script>
+	<!-- scriptinject begin -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/resources.js"></script>
+    <!-- scriptinject end -->
 </html>
